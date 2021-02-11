@@ -6,6 +6,8 @@ jdk:
   - openjdk8
   - openjdk11
 
+before_install:
+            -  sed 's/2.13.0-SNAPSHOT/2.12.1/' pom.xml > tmp && mv tmp pom.xml
 # whitelist
 branches:
   only:
